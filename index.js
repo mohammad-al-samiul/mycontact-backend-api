@@ -12,6 +12,7 @@ connectDB();
 
 app.use(express.json());
 app.use('/api/contact',require('./routes/contactRoutes'));
+app.use('/api/user',require('./routes/userRoutes'));
 app.use(errorHandler);
 
 app.listen(Port, () => {
