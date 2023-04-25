@@ -2,17 +2,22 @@ const mongoose = require("mongoose");
 
 const contactSchema = mongoose.Schema(
   {
+    user_id: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: "User",
+    },
     name: {
       type: String,
-      require: [true, "Please add your name"],
+      required: [true, "Please add your name"],
     },
     email: {
       type: String,
-      require: [true, "Please add your email"],
+      required: [true, "Please add your email"],
     },
     phone: {
       type: String,
-      require: [true, "Please add your phone"],
+      required: [true, "Please add your phone"],
     },
   },
   {

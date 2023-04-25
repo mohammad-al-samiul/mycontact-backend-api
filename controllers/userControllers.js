@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 //@desc register a user
-//@route /api/contact/register
+//@route /api/user/register
 //@access public
 const registerUser = asyncHandler(async (req, res) => {
   const { username, email, password } = req.body;
@@ -40,7 +40,7 @@ const registerUser = asyncHandler(async (req, res) => {
 });
 
 //@desc login a user
-//@route /api/contact/login
+//@route /api/user/login
 //@access public
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
@@ -71,7 +71,7 @@ const loginUser = asyncHandler(async (req, res) => {
 });
 
 //@desc current  user
-//@route /api/contact/current
+//@route /api/user/current
 //@access private
 const currentUser = asyncHandler(async (req, res) => {
   res.json(req.user);
