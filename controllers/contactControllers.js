@@ -26,7 +26,7 @@ const createContact = asyncHandler(async (req, res) => {
   });
 
   // res.status(201).json(contact);
-  console.log("CREATED");
+
   res.status(201).json(contact);
 });
 

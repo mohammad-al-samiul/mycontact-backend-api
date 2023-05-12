@@ -59,15 +59,14 @@ const loginUser = asyncHandler(async (req, res) => {
         },
       },
       process.env.ACCESS_TOKEN_SECRET,
-      {expiresIn : "1h"}
+      { expiresIn: "1h" }
     );
-    res.status(200).json({accessToken});
+    res.status(201).json({ accessToken });
   } else {
     res.status(400);
     throw new Error("email or password wrong");
   }
 
-  res.json({ message: "login user" });
 });
 
 //@desc current  user

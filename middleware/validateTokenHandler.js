@@ -17,7 +17,7 @@ const validateToken = asyncHandler(async (req, res, next) => {
       next();
     });
 
-    console.log("hamim");
+    //console.log("hamim");
 
     if (!token) {
       res.status(401);
